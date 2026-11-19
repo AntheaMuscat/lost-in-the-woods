@@ -1,5 +1,6 @@
 import {Navigation} from "./components/Navigation";
 import {Hero} from "./components/Hero";
+import {Story} from "./components/Story";
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <main>
       <Navigation />
       <Hero />
+      <Story />
     </main>
   )
 }

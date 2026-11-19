@@ -1,0 +1,147 @@
+.story {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(4rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.story::before {
+  content: "";
+  position: absolute;
+  inset: 3rem 45% 3rem 0;
+  z-index: -1;
+  background: url("../assets/aged-map-paper.png") center / cover;
+  opacity: 0.025;
+  mix-blend-mode: screen;
+}
+
+.story-image {
+  position: relative;
+  height: 680px;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.6) contrast(1.1) brightness(0.72);
+}
+
+.story-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 132, 90, 0.15),
+    transparent 45%,
+    rgba(8, 15, 12, 0.35)
+  );
+}
+
+.image-frame {
+  position: absolute;
+  inset: 24px -24px -24px 24px;
+  border: 1px solid rgba(182, 201, 154, 0.23);
+  z-index: -1;
+}
+
+.coordinates {
+  position: absolute;
+  z-index: 2;
+  bottom: 2rem;
+  left: -2.4rem;
+  color: #d6dacd;
+  font-size: 0.52rem;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  transform: rotate(-90deg);
+}
+
+.story-copy .eyebrow {
+  margin-bottom: 1.8rem;
+}
+
+.story-copy .lead {
+  font:
+    400 1.18rem/1.8 "Cinzel",
+    serif;
+  color: #d0d2c5;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.story-copy > p:not(.eyebrow):not(.lead) {
+  color: #929d93;
+  font-size: 0.84rem;
+  line-height: 2;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 1px solid #66845a;
+  font:
+    italic 0.86rem/1.8 "Cinzel",
+    serif;
+  color: #aab6a2;
+}
+
+.line-link {
+  padding: 0.7rem 0;
+  border: 0;
+  border-bottom: 1px solid #66845a;
+  color: #cfd5c6;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.59rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.line-link svg {
+  width: 1rem;
+  transition: 0.25s;
+}
+
+.line-link:hover svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 980px) {
+  .story {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .story-image {
+    height: 600px;
+    max-width: 650px;
+  }
+
+  .story-copy {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 640px) {
+  .story-image {
+    height: 470px;
+    margin-right: 12px;
+  }
+
+  .image-frame {
+    inset: 12px -12px -12px 12px;
+  }
+
+  .coordinates {
+    display: none;
+  }
+
+  .story-copy .lead {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
