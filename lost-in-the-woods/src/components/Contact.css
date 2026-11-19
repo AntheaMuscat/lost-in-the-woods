@@ -1,0 +1,139 @@
+.contact {
+  min-height: 720px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  background: url("../assets/velvet-moss-texture.png") center / 700px;
+  mix-blend-mode: soft-light;
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 7rem 2rem;
+}
+
+.contact-inner > p:not(.eyebrow) {
+  max-width: 600px;
+  margin: 2rem auto;
+  color: #9ca69e;
+  font-size: 0.83rem;
+  line-height: 1.9;
+}
+
+.contact form {
+  display: flex;
+  max-width: 630px;
+  margin: 2.2rem auto 1.8rem;
+  padding: 5px;
+  border: 1px solid rgba(182, 201, 154, 0.28);
+  background: rgba(8, 16, 12, 0.5);
+}
+
+.contact input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  padding: 0 1.4rem;
+  font-size: 0.72rem;
+}
+
+.contact input::placeholder {
+  color: #768178;
+}
+
+.contact .primary {
+  padding: 1.05rem 1.5rem;
+}
+
+.platforms {
+  color: #69766c;
+  letter-spacing: 0.16em;
+  font-size: 0.5rem;
+}
+
+.success {
+  max-width: 520px;
+  margin: 2.5rem auto 2rem;
+  border: 1px solid rgba(182, 201, 154, 0.35);
+  padding: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+  background: rgba(35, 61, 45, 0.25);
+}
+
+.success > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #66845a;
+  color: #b6c99a;
+}
+
+.success strong,
+.success small {
+  display: block;
+}
+
+.success strong {
+  font: 0.72rem "Cinzel";
+  letter-spacing: 0.12em;
+}
+
+.success small {
+  color: #7f8c82;
+  font-size: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .contact {
+    min-height: 650px;
+  }
+
+  .contact-inner {
+    padding: 5rem 1.2rem;
+  }
+
+  .contact form {
+    display: block;
+    border: 0;
+    background: none;
+  }
+
+  .contact input {
+    width: 100%;
+    height: 54px;
+    border: 1px solid rgba(182, 201, 154, 0.28);
+    background: rgba(8, 16, 12, 0.5);
+    margin-bottom: 0.7rem;
+  }
+
+  .contact .primary {
+    width: 100%;
+  }
+}

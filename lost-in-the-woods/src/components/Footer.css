@@ -1,0 +1,50 @@
+footer {
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 5vw;
+  border-top: 1px solid rgba(182, 201, 154, 0.12);
+  color: #657269;
+  font-size: 0.57rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #bdc2b6;
+  font: 600 0.68rem "Cinzel";
+  letter-spacing: 0.1em;
+}
+
+.footer-brand .brand-mark {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-brand svg {
+  width: 17px;
+}
+
+footer a {
+  color: #7b897e;
+  text-decoration: none;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 640px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  footer a {
+    margin: 0 0.6rem;
+  }
+}

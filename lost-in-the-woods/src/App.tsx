@@ -4,6 +4,8 @@ import {Story} from "./components/Story";
 import { Features } from "./components/Features";
 import {World} from "./components/World";
 import {Gallery} from "./components/Gallery";
+import {Contact} from "./components/Contact";
+import {Footer} from "./components/Footer";
 import './App.css'
 
 
@@ -17,6 +19,8 @@ function App() {
       <Features />
       <World />
       <Gallery />
+      <Contact />
+      <Footer />
     </main>
   )
 }
