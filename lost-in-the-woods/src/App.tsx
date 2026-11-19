@@ -3,6 +3,7 @@ import {Hero} from "./components/Hero";
 import {Story} from "./components/Story";
 import { Features } from "./components/Features";
 import {World} from "./components/World";
+import {Gallery} from "./components/Gallery";
 import './App.css'
 
 
@@ -15,6 +16,7 @@ function App() {
       <Story />
       <Features />
       <World />
+      <Gallery />
     </main>
   )
 }

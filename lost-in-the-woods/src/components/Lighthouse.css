@@ -1,0 +1,30 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 9, 6, 0.94);
+  backdrop-filter: blur(15px);
+  display: grid;
+  place-items: center;
+  padding: 5vw;
+  animation: fade 0.25s;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 84vh;
+  box-shadow: 0 20px 80px #000;
+}
+
+.lightbox button {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
