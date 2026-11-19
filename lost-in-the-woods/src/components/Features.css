@@ -1,0 +1,132 @@
+.features {
+  position: relative;
+  padding-top: 7rem;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background:
+    linear-gradient(rgba(16, 27, 22, 0.94), rgba(16, 27, 22, 0.94)),
+    url("../assets/ancient-glyph-pattern.png") center / 760px auto;
+}
+
+.feature-list {
+  border-top: 1px solid rgba(182, 201, 154, 0.17);
+}
+
+.feature {
+  min-height: 190px;
+  border-bottom: 1px solid rgba(182, 201, 154, 0.17);
+  display: grid;
+  grid-template-columns: 70px 90px 1fr 50px;
+  align-items: center;
+  gap: 2rem;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(102, 132, 90, 0.11), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.feature:hover::before {
+  transform: none;
+}
+
+.feature-number {
+  color: #607060;
+  font: 0.6rem "Poppins";
+  letter-spacing: 0.15em;
+}
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(182, 201, 154, 0.25);
+  color: #a7b898;
+  transform: rotate(45deg);
+}
+
+.feature-icon svg {
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+.feature h3 {
+  color: #d9dacd;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.7rem;
+}
+
+.feature p {
+  color: #839087;
+  font-size: 0.78rem;
+  line-height: 1.8;
+  max-width: 670px;
+  margin: 0;
+}
+
+.feature-arrow {
+  color: #657461;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: 0.3s;
+}
+
+.feature:hover .feature-arrow {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 980px) {
+  .feature {
+    grid-template-columns: 40px 70px 1fr;
+    gap: 1.3rem;
+  }
+
+  .feature-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature {
+    grid-template-columns: 48px 1fr;
+    padding: 2rem 0;
+    min-height: 0;
+    gap: 1rem;
+  }
+
+  .feature-number {
+    display: none;
+  }
+
+  .feature-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .feature-icon svg {
+    width: 19px;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+
+  .feature p {
+    font-size: 0.72rem;
+  }
+}
