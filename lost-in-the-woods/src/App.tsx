@@ -1,4 +1,5 @@
 import {Navigation} from "./components/Navigation";
+import {Hero} from "./components/Hero";
 import './App.css'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <main>
       <Navigation />
+      <Hero />
     </main>
   )
 }
